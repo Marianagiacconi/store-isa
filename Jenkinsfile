@@ -56,20 +56,6 @@ pipeline {
                     sh 'gradle test --no-daemon --continue'
                 }
             }
-            post {
-                always {
-                    dir('proyecto-ecommerce/backend') {
-                        publishHTML([
-                            allowMissing: true,
-                            alwaysLinkToLastBuild: true,
-                            keepAll: true,
-                            reportDir: 'build/reports/tests/test',
-                            reportFiles: 'index.html',
-                            reportName: 'Backend Unit Test Report'
-                        ])
-                    }
-                }
-            }
         }
         
         stage('Build Frontend') {
