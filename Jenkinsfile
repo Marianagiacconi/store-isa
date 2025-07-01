@@ -6,6 +6,7 @@ pipeline {
         DOCKER_TAG = "${env.BUILD_NUMBER}"
         DOCKER_REGISTRY = 'localhost:5000'
         JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+        PATH = '/usr/local/bin:/usr/bin:/bin'
     }
     
     stages {
