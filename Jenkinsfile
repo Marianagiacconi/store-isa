@@ -14,6 +14,8 @@ pipeline {
             steps {
                 echo 'Checking out source code...'
                 checkout scm
+                echo 'Checking out submodules...'
+                sh 'git submodule update --init --recursive'
             }
         }
         
@@ -25,6 +27,17 @@ pipeline {
                 sh 'node --version'
                 sh 'npm --version'
                 sh 'docker --version'
+            }
+        }
+        
+        stage('Verify Files') {
+            steps {
+                echo 'Verifying project files...'
+                sh 'ls -la'
+                sh 'ls -la proyecto-ecommerce/'
+                sh 'ls -la proyecto-ecommerce/backend/'
+                sh 'test -f proyecto-ecommerce/backend/build.gradle && echo "build.gradle found" || echo "build.gradle NOT found"'
+                sh 'test -f proyecto-ecommerce/backend/settings.gradle && echo "settings.gradle found" || echo "settings.gradle NOT found"'
             }
         }
         
