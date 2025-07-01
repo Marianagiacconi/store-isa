@@ -100,15 +100,7 @@ pipeline {
                 sh 'echo "Build: ${BUILD_NUMBER}" >> project-report.txt'
                 sh 'echo "" >> project-report.txt'
                 sh 'echo "REQUERIMIENTOS IMPLEMENTADOS:" >> project-report.txt'
-                sh 'echo "1. ✅ Aplicación JHipster con JDL" >> project-report.txt'
-                sh 'echo "2. ✅ Tests de unidad (múltiples)" >> project-report.txt'
-                sh 'echo "3. ✅ Tests E2E con Cypress" >> project-report.txt'
-                sh 'echo "4. ✅ Deploy en Docker" >> project-report.txt'
-                sh 'echo "5. ✅ Servidor de logs ELK" >> project-report.txt'
-                sh 'echo "6. ✅ Aplicación progresiva Ionic" >> project-report.txt'
-                sh 'echo "7. ✅ PWA con funcionalidad offline" >> project-report.txt'
-                sh 'echo "8. ✅ Jenkins CI/CD Pipeline" >> project-report.txt'
-                sh 'echo "" >> project-report.txt'
+               
                 sh 'echo "SERVICIOS DESPLEGADOS:" >> project-report.txt'
                 sh 'echo "- JHipster Backend: http://localhost:8081" >> project-report.txt'
                 sh 'echo "- JHipster Frontend: http://localhost:8080" >> project-report.txt'
@@ -116,8 +108,7 @@ pipeline {
                 sh 'echo "- Kibana Dashboard: http://localhost:5601" >> project-report.txt'
                 sh 'echo "- Jenkins CI/CD: http://localhost:8080" >> project-report.txt'
                 sh 'echo "" >> project-report.txt'
-                sh 'echo "ESTADO: TODOS LOS REQUERIMIENTOS COMPLETADOS ✅" >> project-report.txt'
-            }
+               
             post {
                 always {
                     archiveArtifacts artifacts: 'project-report.txt', fingerprint: true
@@ -132,17 +123,15 @@ pipeline {
             cleanWs()
         }
         success {
-            echo 'Pipeline completed successfully! All requirements implemented!'
-            echo '🎉 ¡TRABAJO FINAL COMPLETADO EXITOSAMENTE! 🎉'
-            echo 'El profesor puede verificar:'
+         
+            echo ' ¡TRABAJO FINAL COMPLETADO EXITOSAMENTE! '
             echo '1. Jenkins corriendo en http://localhost:8080'
             echo '2. Pipeline ejecutándose automáticamente'
             echo '3. Todos los servicios desplegados'
             echo '4. Reporte generado en project-report.txt'
-            echo '✅ TODOS LOS REQUERIMIENTOS IMPLEMENTADOS ✅'
         }
         failure {
-            echo 'Pipeline failed!'
+            echo 'Pipeline fallo!'
         }
     }
 } 
