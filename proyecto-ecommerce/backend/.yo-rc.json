@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "baseName": "store",
+    "buildTool": "gradle",
+    "clientFramework": "react",
+    "creationTimestamp": 1750339138359,
+    "enableTranslation": true,
+    "entities": ["Product", "ProductCategory", "CustomerDetails", "ShoppingCart", "ProductOrder"],
+    "jhipsterVersion": "8.11.0",
+    "jwtSecretKey": "YjBmMjI4MTA1MmFmZjk1YWJkOWZhYzhjNDc0MDNiNDdhNzRmNGMyZWJiZTQwMzI5Y2RjMTFhYWI4YzZkYjM3NjY3Y2M4NWZhMDlkZDk5ZTgxOWNhNGQwZmFmMjlhYmI0MDkzZTQzYTU3NmZlMWQ1YmUzNGU2ODIzYWYxYjM4MTA=",
+    "languages": ["en", "nl"],
+    "lastLiquibaseTimestamp": 1750338033000,
+    "nativeLanguage": "en",
+    "packageName": "com.jhipster.demo.store",
+    "prodDatabaseType": "mysql"
+  }
+}
