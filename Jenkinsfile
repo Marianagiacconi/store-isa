@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Building backend with Gradle...'
                 dir('proyecto-ecommerce/backend') {
-                    sh './gradlew clean build -x test'
+                    sh 'gradle clean build -x test'
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 echo 'Running backend unit tests...'
                 dir('proyecto-ecommerce/backend') {
-                    sh './gradlew test'
+                    sh 'gradle test'
                 }
             }
             post {
