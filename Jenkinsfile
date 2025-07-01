@@ -31,9 +31,8 @@ pipeline {
             steps {
                 echo 'Building backend with Gradle...'
                 dir('proyecto-ecommerce/backend') {
-                    sh 'chmod +x gradlew'
                     sh 'ls -la'
-                    sh './gradlew clean build -x test --no-daemon --info'
+                    sh 'gradle clean build -x test --no-daemon --info'
                 }
             }
         }
@@ -42,8 +41,7 @@ pipeline {
             steps {
                 echo 'Running backend unit tests...'
                 dir('proyecto-ecommerce/backend') {
-                    sh 'chmod +x gradlew'
-                    sh './gradlew test --no-daemon'
+                    sh 'gradle test --no-daemon'
                 }
             }
             post {
