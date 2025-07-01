@@ -2,44 +2,44 @@
 
 Este proyecto implementa una aplicación e-commerce completa siguiendo los requisitos académicos, incluyendo backend JHipster, tests, Docker, ELK logging, Jenkins CI/CD y una aplicación Ionic PWA.
 
-## 🎯 Requisitos Completados
+##  Requisitos Completados
 
-### ✅ 1. Aplicación JHipster desde Modelo JDL
+###  1. Aplicación JHipster desde Modelo JDL
 - **Modelo JDL**: `simple-shop.jdl` con entidades Book, Customer y Order
 - **Backend**: Aplicación Spring Boot con JPA, REST API, y Swagger
 - **Frontend**: Interfaz web integrada con Angular/React
 - **Base de datos**: PostgreSQL configurado
 
-### ✅ 2. Tests Unitarios y E2E con Cypress
+###  2. Tests Unitarios y E2E con Cypress
 - **Tests Unitarios**: Implementados en Java para entidades principales
 - **Tests E2E**: Configurados con Cypress para flujos de usuario
 - **Cobertura**: Tests en español con comentarios detallados
 
-### ✅ 3. Deployment con Docker
+###  3. Deployment con Docker
 - **Dockerfile**: Multi-stage build optimizado
 - **Docker Compose**: Configuración completa con MySQL y ELK
 - **Puertos**: Configurados para evitar conflictos (8081, 3307, etc.)
 
-### ✅ 4. Servidor de Logging ELK
+###  4. Servidor de Logging ELK
 - **Elasticsearch**: Almacenamiento y búsqueda de logs
 - **Logstash**: Procesamiento y enriquecimiento de logs
 - **Kibana**: Visualización y análisis de logs
 - **Configuración**: Pipeline personalizado para la aplicación
 
-### ✅ 5. Jenkins CI/CD
+###  5. Jenkins CI/CD
 - **Pipeline**: Jenkinsfile completo con múltiples stages
 - **Tests**: Ejecución automática de tests unitarios y E2E
 - **Build**: Construcción de imagen Docker
 - **Deploy**: Despliegue automático a producción
 
-### ✅ 6. Aplicación Ionic PWA
+###  6. Aplicación Ionic PWA
 - **PWA Completa**: Instalable en dispositivos móviles
 - **Gestión CRUD**: Libros, Clientes y Órdenes
 - **Dashboard**: Estadísticas en tiempo real
 - **Service Worker**: Funcionalidad offline
 - **API Integration**: Consume el backend JHipster
 
-## 🏗️ Arquitectura del Proyecto
+##  Arquitectura del Proyecto
 
 ```
 proyecto-ecommerce/
@@ -67,7 +67,7 @@ proyecto-ecommerce/
 └── README.md                   # Documentación principal
 ```
 
-## 🚀 Instalación y Configuración
+##  Instalación y Configuración
 
 ### Prerrequisitos
 - Docker y Docker Compose
@@ -100,7 +100,7 @@ npm install
 npm start
 ```
 
-## 📊 Servicios y Puertos
+##  Servicios y Puertos
 
 | Servicio | Puerto | Descripción |
 |----------|--------|-------------|
@@ -111,7 +111,7 @@ npm start
 | Logstash | 5044 | Procesamiento de logs |
 | PWA | 3000 | Aplicación Ionic |
 
-## 🔧 Configuración de ELK
+##  Configuración de ELK
 
 ### Elasticsearch
 - URL: http://localhost:9200
@@ -128,7 +128,7 @@ npm start
 - Filtros: Enriquecimiento de logs con metadatos
 - Output: Envío a Elasticsearch
 
-## 🧪 Testing
+##  Testing
 
 ### Tests Unitarios
 ```bash
@@ -148,7 +148,7 @@ cd store-pwa
 npm test
 ```
 
-## 🔄 CI/CD Pipeline
+##  CI/CD Pipeline
 
 El pipeline de Jenkins incluye:
 
@@ -161,7 +161,7 @@ El pipeline de Jenkins incluye:
 7. **Docker Build**: Construcción de imagen
 8. **Deploy**: Despliegue automático
 
-## 📱 Funcionalidades PWA
+##  Funcionalidades PWA
 
 ### Dashboard
 - Estadísticas en tiempo real
@@ -183,7 +183,7 @@ El pipeline de Jenkins incluye:
 - Estados de órdenes
 - Cálculo de totales
 
-## 🔍 Monitoreo y Logging
+##  Monitoreo y Logging
 
 ### Logs de Aplicación
 - Logs estructurados en JSON
@@ -195,7 +195,7 @@ El pipeline de Jenkins incluye:
 - Métricas de aplicación
 - Monitoreo de rendimiento
 
-## 🛠️ Desarrollo
+##  Desarrollo
 
 ### Estructura de Desarrollo
 - **Backend**: Spring Boot con JHipster
@@ -209,14 +209,8 @@ El pipeline de Jenkins incluye:
 3. Build y deploy automático
 4. Monitoreo en producción
 
-## 📚 Documentación Adicional
 
-- [Documentación JHipster](https://www.jhipster.tech/)
-- [Documentación Ionic](https://ionicframework.com/docs)
-- [Documentación ELK](https://www.elastic.co/guide/index.html)
-- [Documentación Docker](https://docs.docker.com/)
-
-## 🎓 Aspectos Académicos
+##  Aspectos Académicos
 
 Este proyecto demuestra:
 
@@ -227,10 +221,6 @@ Este proyecto demuestra:
 - **PWA**: Aplicaciones web progresivas
 - **Logging**: Centralizado con ELK stack
 
-## 📄 Licencia
 
-Proyecto académico para demostración de tecnologías modernas de desarrollo web.
 
----
-
-**Desarrollado como proyecto final académico** 🎓 # store-isa
+**Desarrollado como proyecto final académico**  # store-isa
