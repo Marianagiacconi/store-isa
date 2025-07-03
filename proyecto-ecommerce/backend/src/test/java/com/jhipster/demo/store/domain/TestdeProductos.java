@@ -1,9 +1,8 @@
 package com.jhipster.demo.store.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 import com.jhipster.demo.store.domain.enumeration.Size;
-import com.jhipster.demo.store.web.rest.TestUtil;
+import com.jhipster.demo.store.web.rest.TestUtil;  
 import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
 
@@ -12,9 +11,8 @@ import org.junit.jupiter.api.Test;
  * 
  * Este test valida la funcionalidad de la entidad Product (Producto)
  * Incluye pruebas de creación, validaciones y comparaciones de objetos
- */
-class ProductUnitTest {
-
+ */ 
+public class TestdeProductos {
     /**
      * Test que verifica la funcionalidad de comparación entre productos
      * Valida que dos productos con el mismo ID sean iguales

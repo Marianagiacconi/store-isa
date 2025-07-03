@@ -1,8 +1,8 @@
-# 📋 COMANDOS COMPLETOS - TRABAJO FINAL INGENIERÍA DE SOFTWARE APLICADA
+# COMANDOS COMPLETOS - TRABAJO FINAL INGENIERÍA DE SOFTWARE APLICADA
 
-## 🎯 REQUERIMIENTOS IMPLEMENTADOS
+## REQUERIMIENTOS IMPLEMENTADOS
 
-### 1. ✅ APLICACIÓN JHIPSTER CON JDL
+### 1.APLICACIÓN JHIPSTER CON JDL
 
 **Verificar que el backend esté corriendo:**
 ```bash
@@ -25,7 +25,7 @@ cd proyecto-ecommerce/backend
 
 ---
 
-### 2. ✅ TESTS DE UNIDAD (2 archivos personalizados)
+### 2.TESTS DE UNIDAD (2 archivos personalizados)
 
 **Ejecutar tests unitarios:**
 ```bash
@@ -37,19 +37,14 @@ gradle test --no-daemon
 ```bash
 # Verificar que existen los archivos de test personalizados
 ls -la src/test/java/com/jhipster/demo/store/domain/TestdeProductos.java
-ls -la src/test/java/com/jhipster/demo/store/domain/DetallesDeClIentes.java
 
 # Ejecutar solo los tests personalizados
-gradle test --tests "*ProductUnitTest*" --tests "*CustomerDetailsUnitTest*"
+gradle test --tests "*TestdeProductos*" --tests "*CustomerDetailsUnitTest*"
 ```
 
-**Resultado esperado:**
-- 218 tests ejecutándose exitosamente
-- Tests personalizados: 6 métodos de test (3 por archivo)
 
----
 
-### 3. ✅ TESTS E2E CON CYPRESS (3 tests)
+### 3. TESTS E2E CON CYPRESS (3 tests)
 
 **Ejecutar tests E2E:**
 ```bash
@@ -81,9 +76,9 @@ ls -la cypress/support/e2e.ts
 - Login usando API + navegación PWA
 - Creación de productos via API
 
----
 
-### 4. ✅ DEPLOY EN DOCKER
+
+### 4. DEPLOY EN DOCKER
 
 **Construir imagen Docker:**
 ```bash
@@ -102,9 +97,9 @@ docker ps
 docker images | grep isa-store
 ```
 
----
 
-### 5. ✅ SERVIDOR DE LOGS ELK
+
+### 5. SERVIDOR DE LOGS ELK
 
 **Iniciar stack ELK:**
 ```bash
@@ -130,9 +125,9 @@ cd proyecto-ecommerce/docker
 ./stop-elk.sh
 ```
 
----
 
-### 6. ✅ APLICACIÓN PROGRESIVA IONIC
+
+### 6. APLICACIÓN PROGRESIVA IONIC
 
 **Iniciar aplicación Ionic PWA:**
 ```bash
@@ -149,9 +144,8 @@ curl http://localhost:3000
 - PWA: http://localhost:3000
 - Título: "Tienda de Libros PWA"
 
----
 
-### 7. ✅ PWA CON FUNCIONALIDAD OFFLINE
+### 7. PWA CON FUNCIONALIDAD OFFLINE
 
 **Verificar archivos PWA:**
 ```bash
@@ -169,9 +163,7 @@ cat public/manifest.webmanifest
 head -10 public/sw.js
 ```
 
----
-
-### 8. ✅ JENKINS CI/CD PIPELINE
+### 8. JENKINS CI/CD PIPELINE
 
 **Verificar estado de Jenkins:**
 ```bash
@@ -194,9 +186,8 @@ sudo systemctl start jenkins
 3. Seleccionar job "store-isa"
 4. Click en "Build Now"
 
----
 
-## 🚀 COMANDOS DE VERIFICACIÓN RÁPIDA
+## COMANDOS DE VERIFICACIÓN RÁPIDA
 
 ### **Verificar todo el stack:**
 ```bash
@@ -228,9 +219,8 @@ cd store-pwa
 npx cypress run
 ```
 
----
 
-## 📊 COMANDOS DE MONITOREO
+## COMANDOS DE MONITOREO
 
 ### **Ver logs en tiempo real:**
 ```bash
@@ -258,9 +248,8 @@ sudo lsof -i :9200
 sudo lsof -i :5601
 ```
 
----
 
-## 🔧 COMANDOS DE TROUBLESHOOTING
+## COMANDOS DE TROUBLESHOOTING
 
 ### **Si el backend no inicia:**
 ```bash
@@ -310,7 +299,7 @@ npx cypress run
 
 ---
 
-## 📝 COMANDOS PARA DEMOSTRACIÓN AL PROFESOR
+## COMANDOS PARA DEMOSTRACIÓN AL PROFESOR
 
 ### **Secuencia de demostración:**
 ```bash
@@ -335,25 +324,3 @@ curl http://localhost:9200
 curl http://localhost:5601
 ```
 
----
-
-## ✅ CHECKLIST FINAL
-
-- [ ] Backend JHipster corriendo en puerto 8081
-- [ ] PWA Ionic corriendo en puerto 3000
-- [ ] Jenkins corriendo en puerto 8080
-- [ ] ELK Stack corriendo (puertos 9200, 5601)
-- [ ] Tests unitarios pasando (218 tests)
-- [ ] Tests E2E pasando (3 tests)
-- [ ] Pipeline Jenkins ejecutándose
-- [ ] Docker funcionando
-- [ ] PWA con service worker y manifest
-
----
-
-## 📞 INFORMACIÓN DE CONTACTO
-
-**Estudiante:** Mariana Giacconi  
-**Materia:** Ingeniería de Software Aplicada  
-**Fecha:** Julio 2025  
-**Repositorio:** https://github.com/Marianagiacconi/store-isa 

@@ -83,6 +83,11 @@ pipeline {
             steps {
                 echo 'Deploying ELK Stack for logging...'
                 dir('proyecto-ecommerce/docker') {
+                    // Antes de crear contenedores, borramos los anteriores si ya existen
+                    sh 'docker rm -f elasticsearch || true'
+                    sh 'docker rm -f logstash || true'
+                    sh 'docker rm -f kibana || true'
+
                     sh 'docker-compose -f docker-elk.yml down || echo "ELK not running"'
                     sh 'docker-compose -f docker-elk.yml up -d elasticsearch logstash kibana || echo "ELK deployment failed, continuing..."'
                     sh 'sleep 30'
@@ -100,7 +105,6 @@ pipeline {
                 sh 'echo "Build: ${BUILD_NUMBER}" >> project-report.txt'
                 sh 'echo "" >> project-report.txt'
                 sh 'echo "REQUERIMIENTOS IMPLEMENTADOS:" >> project-report.txt'
-               
                 sh 'echo "SERVICIOS DESPLEGADOS:" >> project-report.txt'
                 sh 'echo "- JHipster Backend: http://localhost:8081" >> project-report.txt'
                 sh 'echo "- JHipster Frontend: http://localhost:8080" >> project-report.txt'
@@ -108,7 +112,7 @@ pipeline {
                 sh 'echo "- Kibana Dashboard: http://localhost:5601" >> project-report.txt'
                 sh 'echo "- Jenkins CI/CD: http://localhost:8080" >> project-report.txt'
                 sh 'echo "" >> project-report.txt'
-               
+            }
             post {
                 always {
                     archiveArtifacts artifacts: 'project-report.txt', fingerprint: true
@@ -123,7 +127,6 @@ pipeline {
             cleanWs()
         }
         success {
-         
             echo ' ¡TRABAJO FINAL COMPLETADO EXITOSAMENTE! '
             echo '1. Jenkins corriendo en http://localhost:8080'
             echo '2. Pipeline ejecutándose automáticamente'
@@ -131,7 +134,7 @@ pipeline {
             echo '4. Reporte generado en project-report.txt'
         }
         failure {
-            echo 'Pipeline fallo!'
+            echo 'Pipeline falló.'
         }
     }
-} 
+}

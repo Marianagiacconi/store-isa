@@ -132,13 +132,7 @@ const Products: React.FC = () => {
           <IonButton slot="end" fill="clear" onClick={loadProducts}>
             <IonIcon icon={refresh} />
           </IonButton>
-          <IonBadge 
-            data-testid="cart-count" 
-            color="success" 
-            style={{ marginRight: '1rem' }}
-          >
-            {cartItems.length}
-          </IonBadge>
+        
         </IonToolbar>
       </IonHeader>
 

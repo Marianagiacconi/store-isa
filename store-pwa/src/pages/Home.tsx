@@ -17,21 +17,17 @@ import {
   IonLoading,
   IonToast,
   IonBadge,
-  IonItem,
-  IonLabel,
-  IonThumbnail,
+
 } from '@ionic/react';
 import { 
   book, 
   people, 
   cart, 
-  statsChart, 
   add, 
   list,
-  refresh,
   logOut,
   star,
-  heart
+  wifi
 } from 'ionicons/icons';
 import { productService, customerService, orderService, Product } from '../services/api';
 import { useAuth } from '../App';
@@ -99,13 +95,6 @@ const Home: React.FC<HomeProps> = ({ onLogout }) => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Tienda E-commerce</IonTitle>
-          <IonBadge 
-            data-testid="cart-count" 
-            color="success" 
-            style={{ marginRight: '1rem' }}
-          >
-            {cartItems.length}
-          </IonBadge>
           <IonButton slot="end" fill="clear" onClick={onLogout}>
             <IonIcon icon={logOut} />
           </IonButton>
@@ -127,9 +116,15 @@ const Home: React.FC<HomeProps> = ({ onLogout }) => {
               <p style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>
                 Descubre nuestra amplia selección de productos de alta calidad
               </p>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <IonButton expand="block" fill="outline" routerLink="/products">
                 Ver Todos los Productos
               </IonButton>
+                <IonButton expand="block" fill="outline" routerLink="/offline-demo" color="warning">
+                  <IonIcon slot="start" icon={wifi} />
+                  Demo PWA Offline
+                </IonButton>
+              </div>
             </IonCardContent>
           </IonCard>
 

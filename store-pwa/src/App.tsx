@@ -33,6 +33,8 @@ import { authService, User } from './services/authService';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import AdminPanel from './pages/AdminPanel';
+import OfflineDemo from './pages/OfflineDemo';
+import OfflineStatus from './components/OfflineStatus';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -368,6 +370,7 @@ const App: React.FC = () => {
     <IonApp>
       <AuthProvider>
         <CartProvider>
+          <OfflineStatus />
           <IonReactRouter>
             <IonTabs>
               <IonRouterOutlet>
@@ -379,6 +382,7 @@ const App: React.FC = () => {
                 <PrivateRoute path="/cart" component={CartPage} />
                 <PrivateRoute path="/profile" component={ProfilePage} />
                 <PrivateRoute path="/admin" component={AdminPanel} adminOnly />
+                <Route path="/offline-demo" component={OfflineDemo} />
                 <Redirect exact from="/home" to="/" />
               </IonRouterOutlet>
               <NavigationTabs />
